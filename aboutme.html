@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleesya - ABOUT ME</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        body {
+            background-color: #fdfaf3;
+            color: #4d3c2f;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0dcd7;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4d3c2f;
+            font-size: 1rem;
+        }
+        
+        .about-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px; /* Adds spacing between the text and the image */
+}
+
+.about-text {
+    flex: 2; /* Makes the text container larger */
+    font-size: 1.2rem; /* Increases text size */
+    line-height: 1.6; /* Improves readability */
+    padding-right: 20px;
+}
+
+.about-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+}
+
+.about-image {
+    aspect-ratio: 9 / 16; /* Maintains a 9:16 aspect ratio */
+    width: 100%; /* Ensures the image scales properly */
+    max-width: 300px; /* Limits the maximum width */
+    border: 5px solid #ccc; /* Adds a frame around the image */
+    border-radius: 10px; /* Optional: Makes the edges rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    object-fit: cover; /* Ensures the image fits within the 9:16 frame */
+}
+
+.about-container > div:last-child {
+    text-align: center;
+}
+
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .about-text {
+            max-width: 600px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+    .about-image {
+        max-width: 200px; /* Reduce the image size for smaller screens */
+        border: 3px solid #ccc; /* Slightly thinner border */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        max-width: 150px; /* Further reduce the image size for very small screens */
+    }
+}
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .about-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease;
+        }
+
+
+        .skills-section {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .skills-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .skills-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .skills-bar div {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .skills-bar span {
+            display: inline-block;
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skills-bar span::before {
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #6c63ff;
+            animation: grow 2s ease-in-out;
+        }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+            to {
+                width: var(--width);
+            }
+        }
+
+        .skills-bar .communication span::before {
+            --width: 100%;
+        }
+
+        .skills-bar .teamwork span::before {
+            --width: 95%;
+        }
+
+        .skills-bar .leadership span::before {
+            --width: 80%;
+        }
+
+        .skills-bar .time-management span::before {
+            --width: 85%;
+        }
+
+        .skills-bar .flexible span::before {
+            --width: 77%;
+        }
+
+        .family-section {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .family-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .family-images img {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .family-images img:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Soft Skills Section */
+        .skills-container {
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .skill {
+            margin: 10px 0;
+        }
+
+        .skill p {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0dcd7;
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #5c4433;
+            border-radius: 5px;
+        }
+
+        .progress-input {
+            width: 60px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Technical Skills */
+        .technical-skills {
+            padding: 30px 50px;
+            text-align: center;
+        }
+
+        .technical-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .technical-icons img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .technical-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #e7e4e0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ALEESYA</div>
+        <ul>
+            <li><a href="newhomepage.html">HOME</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contactme.html">CONTACT ME</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="about-container">
+        <div class="about-text">
+            <h1>ABOUT ME</h1>
+            <p>Hello! I’m Nur Aleesya Aleeya, a 20-year-old student currently in my final semester of Information Management. With a passion for technology and a keen interest in data organization, I am excited to apply my knowledge and skills in the real world.</p>
+            <p>Throughout my academic journey, I have developed strong teamwork abilities, allowing me to collaborate effectively with diverse groups of people. I thrive in various environments, adapting quickly to new challenges and contributing positively to any project I undertake.</p>
+            <p>As I prepare to embark on the next chapter of my career, I am eager to leverage my education and experiences to make a meaningful impact in the field of Information Management. Thank you for visiting my website!</p>
+        </div>
+        <div>
+            <img src="image2.jpg" alt="Aleesya Photo" class="about-image">
+            <!-- Replace 'your-image-path.jpg' with your actual image path -->
+        </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section class="skills-container">
+        <h2>Soft Skills</h2>
+        <div class="skill">
+            <p><span>Communication</span><span><input type="number" class="progress-input" placeholder="100" onchange="updateProgress(this, 0)">% </span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;" id="progress-0"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><span>Teamwork</span><span><input type="number" class="progress-input" placeholder="100" onchange="updateProgress(this, 1)">% </span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;" id="progress-1"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><span>Leadership</span><span><input type="number" class="progress-input" placeholder="80" onchange="updateProgress(this, 2)">% </span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;" id="progress-2"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><span>Time Management</span><span><input type="number" class="progress-input" placeholder="80" onchange="updateProgress(this, 3)">% </span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;" id="progress-3"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><span>Flexible</span><span><input type="number" class="progress-input" placeholder="77" onchange="updateProgress(this, 4)">% </span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 77%;" id="progress-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="technical-skills">
+        <h2>Technical Skills</h2>
+        <div class="technical-icons">
+            <img src="canva.jpg" alt="Canva">
+            <img src="word.jpg" alt="Word">
+            <img src="powerpoint.jpg" alt="PowerPoint">
+            <img src="excel.jpg" alt="Excel">
+            <img src="devc++.jpg" alt="devc++">
+        </div>
+    </section>
+
+    <section id="family" class="family-section">
+        <h2>My Precious Family</h2>
+        <div class="family-images">
+            <img src="family1.jpg" alt="Family 1">
+            <img src="family2.jpg" alt="Family 2">
+            <img src="family3.jpg" alt="Family 3">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Aleesya. All Rights Reserved.
+    </footer>
+</body>
+</html>
+
+
+

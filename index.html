@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Aleesya</title>
+    <style>
+        /* Reset Default Margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #fdfaf3;
+            color: #4d3c2f;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0dcd7;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4d3c2f;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            justify-items: center;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        .grid-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .grid-container blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+        }
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: url('homepagepic.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+        .hero .content {
+            position: absolute;
+            left: 50px;
+            bottom: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
+
+        .hero .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero .content p {
+            font-size: 1.2rem;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 30px 0;
+            text-transform: uppercase;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            background-color: #e7e4e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ALEESYA</div>
+        <ul>
+            <li><a href="newhomepage.html">HOME</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contactme.html">CONTACT ME</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Replace with actual content -->
+        <div class="content">
+            <h1>HI, I'M LEESYA</h1>
+            <p>Welcome to my personal website.</p>
+        </div>
+    </section>
+
+    <div class="grid-container">
+        <img src="albert.jpg" alt="Albert Einstein">
+        <blockquote>
+        <p>“Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.”</p>
+        </blockquote>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Aleesya. All Rights Reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Aleesya</title>
+    <style>
+        /* Reset Default Margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #fdfaf3;
+            color: #4d3c2f;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0dcd7;
+            background-color: #fdfaf3;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4d3c2f;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Area */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #fdfaf3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 10px; /* Reduced padding for more consistent size */
+            height: 100%; /* Ensures all grid items have the same height */
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Focus effect for accessibility */
+        .grid-item:focus-within {
+            outline: 3px solid #4d3c2f; /* Adds a visual focus indicator */
+        }
+
+        /* Make images have a 9:16 aspect ratio */
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9 / 16; /* Enforces 9:16 aspect ratio */
+            object-fit: cover;
+            border-bottom: 3px solid #ddd;
+        }
+
+        /* Ensure content is displayed below the image */
+        .content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensures space is distributed properly */
+            flex: 1;
+        }
+
+        .content h3, .content h4, .content h5 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fdfaf3;
+            color: #4d3c2f;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ALEESYA</div>
+        <ul>
+            <li><a href="newhomepage.html">HOME</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contactme.html">CONTACT ME</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item">
+                <img src="ayamas.jpg" alt="Position Metal Detector at Ayamas Factory">
+                <div class="content">
+                    <h3>Work as Position Metal Detector in Ayamas Factory</h3>
+                    <p>• 3-month working at the Ayamas factory<br>• Took care of Ayamas food products to avoid products containing iron.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="skp.jpg" alt="Student Service Scheme at UiTM">
+                <div class="content">
+                    <h3>Work as Student Service Scheme at UiTM Machang</h3>
+                    <p>• 1-semester work with PJIa under Dr. Nazhatul Shima<br>• Assisted in completing office matters.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="live.jpg" alt="Live Host at EFFESYEN Store">
+                <div class="content">
+                    <h3>Work as Live Host at EFFESYEN Store</h3>
+                    <p>• Worked as live host during semester break<br>• Sold women’s pants via live sessions.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="felda.jpg" alt="Internship at Felda Kampung Awah">
+                <div class="content">
+                    <h3>My Internship at Felda Kampung Awah</h3>
+                    <p>• Learned conference organization and problem resolution<br>• Handled palm oil plotting agreements and project data.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="7e.jpg" alt="Part-time Job at 7Eleven">
+                <div class="content">
+                    <h3>My Part-time Job at 7Eleven</h3>
+                    <p>• Learned how to organize things at the company<br>• Managed various shifts including morning, evening, and night shifts.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="gepuk.jpg" alt="Part-time Job at AyamGepukFruitiGo">
+                <div class="content">
+                    <h3>My Part-time Job at AyamGepukFruitiGo</h3>
+                    <p>• Cooking ayamgepuk and also fruit juice to the customer<br>• Managed various shifts including morning, afternoon and also evening shifts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        ©2024 Aleesya. All rights reserved.
+    </footer>
+</body>
+</html>
+
+
+
+
